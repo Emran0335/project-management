@@ -10,7 +10,7 @@ import projectRoutes from "./routes/projectRoutes";
 import taskRoutes from "./routes/taskRoutes";
 import searchRoutes from "./routes/searchRoutes";
 import userRoutes from "./routes/userRoutes";
-import teamRoutes from "./routes/teamRoutes"
+import teamRoutes from "./routes/teamRoutes";
 
 // CONFIGURATiONS
 dotenv.config();
@@ -34,7 +34,8 @@ app.use("/users", userRoutes);
 app.use("/teams", teamRoutes);
 
 // SERVER
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
+// Number and "0.0.0.0" middleware are for typescript safety
+const port = Number(process.env.PORT) || 3000;
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server running on port: ${port}`);
 });
