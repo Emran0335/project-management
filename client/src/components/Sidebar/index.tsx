@@ -58,7 +58,12 @@ const Sidebar = () => {
         </div>
         {/* TEAM  */}
         <div className="flex items-center gap-5 border-y-[1.5px] border-gray-200 px-8 py-4 dark:border-gray-700">
-          <Image src="/logo.png" alt="logo" width={40} height={40} />
+          <Image
+            src="https://pm-s-3-images.s3.ap-south-1.amazonaws.com/logo.png"
+            alt="logo"
+            width={40}
+            height={40}
+          />
           <div>
             <h3 className="font-semibold tracking-wide dark:text-gray-200">
               EMRAN TEAM
@@ -97,7 +102,7 @@ const Sidebar = () => {
               key={project.id}
               icon={Briefcase}
               label={project.name}
-              href={`/projects/${project.id }`}
+              href={`/projects/${project.id}`}
             />
           ))}
 
