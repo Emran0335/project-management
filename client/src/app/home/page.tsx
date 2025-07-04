@@ -126,7 +126,7 @@ const HomePage = () => {
             Project Status
           </h3>
           <ResponsiveContainer width="100%" height={300}>
-            <PieChart data={taskDistribution}>
+            <PieChart>
               <Pie dataKey="count" data={projectStatus} fill="#82ca9d" label>
                 {projectStatus.map((entry, index) => (
                   <Cell
